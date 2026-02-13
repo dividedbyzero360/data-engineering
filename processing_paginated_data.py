@@ -33,7 +33,6 @@ def process_event_data(event):
     result["actor__id"] = event["actor"]["id"]
     result["actor__login"] = event["actor"]["login"]
     topics = event.get('payload', {}).get('pull_request', {}).get('base', {}).get('repo', {}).get('topics', [])
-    print(json.dumps(event.get('payload', {}).get('pull_request', {}).get('base', {}).get('repo', {}), indent=2))
     processed_topics = []
     for topic in topics:
         processed_topic = {
@@ -45,10 +44,12 @@ def process_event_data(event):
 
 
 
-processed_events = []
-processed_topics = []
-for event_data in event_data():
-    for event in event_data:
-        processed_event, processed_topics = process_event_data(event)
-        processed_events.append(processed_event)
-        processed_topics.extend(processed_topics)
+if __name__ == "__main__": 
+    print("here")
+    processed_events = []
+    processed_topics = []
+    for event_data in event_data():
+        for event in event_data:
+            processed_event, processed_topics = process_event_data(event)
+            processed_events.append(processed_event)
+            processed_topics.extend(processed_topics)
