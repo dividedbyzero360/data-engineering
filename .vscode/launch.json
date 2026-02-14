@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    
+    {
+      "name": "Python: dlt_pipelines.api_call (as module)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "dlt_pipelines.api_call",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    }
+  ]
+}
