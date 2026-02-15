@@ -68,5 +68,19 @@ print(info)
 # print all the tables which were created
 print(pipeline.dataset().schema.data_table_names())
 
-print(pipeline.dataset().events.df())
-print(pipeline.dataset().events__payload__pull_request__base__repo__topics.df())
+# print(pipeline.dataset().events.df())
+# print(pipeline.dataset().events__payload__pull_request__base__repo__topics.df())
+
+sql = """
+SELECT e._dlt_id,*
+FROM events e
+JOIN events__payload__pull_request__base__repo__topics c
+ON e._dlt_id = c._dlt_parent_id
+"""
+with pipeline.sql_client() as client:
+    with client.execute_query(sql) as cursor:
+        data = cursor.df()
+
+print(data)
+
+print(pipeline.default_schema.to_pretty_yaml())
