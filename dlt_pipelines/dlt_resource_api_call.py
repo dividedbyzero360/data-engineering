@@ -7,11 +7,12 @@ import os
 API_TOKEN = os.getenv('GITHUB_TOKEN')
 BASE_URL="https://api.github.com/repos/DataTalksClub/data-engineering-zoomcamp"
 
-# @dlt.resource()
-def paginated_getter():
+@dlt.resource()
+def paginated_getter(GITHUB_TOKEN=dlt.secrets.value):
+    print(GITHUB_TOKEN)
     client = RESTClient(
         base_url = BASE_URL,
-        auth = BearerTokenAuth(token=API_TOKEN),
+        auth = BearerTokenAuth(token=GITHUB_TOKEN),
         paginator=HeaderLinkPaginator(links_next_key="next")
     )
 
