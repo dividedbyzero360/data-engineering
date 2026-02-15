@@ -11,10 +11,10 @@
       "justMyCode": true
     },
     {
-      "name": "Python: dlt_pipelines.dlt_resource_api_call (as module)",
+      "name": "Python: dlt_pipelines.dlt_resource_api_duckdb_pipleine (as module)",
       "type": "debugpy",
       "request": "launch",
-      "module": "dlt_pipelines.dlt_resource_api_call",
+      "module": "dlt_pipelines.dlt_resource_api_duckdb_pipleine",
       "cwd": "${workspaceFolder}",
       "justMyCode": true
     }
