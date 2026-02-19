@@ -17,6 +17,14 @@
       "module": "dlt_pipelines.dlt_resource_api_duckdb_pipleine",
       "cwd": "${workspaceFolder}",
       "justMyCode": true
+    },
+    {
+      "name": "Python: dlt_pipelines.dlt_normalization_nesting (as module)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "dlt_pipelines.dlt_normalization_nesting",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
     }
   ]
 }
