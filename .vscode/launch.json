@@ -25,6 +25,22 @@
       "module": "dlt_pipelines.dlt_normalization_nesting",
       "cwd": "${workspaceFolder}",
       "justMyCode": true
+    },
+    {
+      "name": "Python: dlt_pipelines.dlt_full_load (as module)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "dlt_pipelines.dlt_full_load",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    },
+    {
+      "name": "Python: dlt_pipelines.dlt_incremental_loading (as module)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "dlt_pipelines.dlt_incremental_loading",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
     }
   ]
 }
